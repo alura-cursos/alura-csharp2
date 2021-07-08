@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FilmesApi.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
@@ -12,5 +13,7 @@ namespace FilmesAPI.Models
         public int Id { get; set; }
         [Required(ErrorMessage = "O campo de nome é obrigatório")]
         public string Nome { get; set; }
+        public virtual Endereco Endereco { get; set; }
+        public int EnderecoId { get; set; }
     }
 }
